@@ -1,0 +1,19 @@
+<div [formGroup]="inputForm" class="inline w100">
+  <label for="{{id}}" *ngIf="labelPlace=='before'">{{labelText}}</label>
+  <input *ngIf="type!=='checkbox'" type="{{type}}"
+         id="{{id}}"
+         placeholder="{{placeholder}}"
+         formControlName="{{controlName}}"
+         [class.error]="errorClassCondition"
+         [disabled]="disabled"
+  />
+  <input *ngIf="type==='checkbox'"
+         type="checkbox"
+         id="{{id}}"
+         placeholder="{{placeholder}}"
+         formControlName="{{controlName}}"
+         [class.error]="errorClassCondition"
+         [disabled]="disabled"
+  />
+  <label for="{{id}}" *ngIf="labelPlace=='after'">{{labelText}}</label>
+</div>

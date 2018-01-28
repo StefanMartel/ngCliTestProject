@@ -1,0 +1,33 @@
+@import '../../styles/global-styles';
+
+input{
+
+  &[type="text"],
+  &[type="password"]{
+    width: 100%;
+  }
+
+  &[type="checkbox"]{
+    margin: 6px 0 0 0;
+  }
+
+  line-height: 20px;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+  border:$border-input-style $border-input-size $border-input-color;
+  background-color: $input-background-color;
+
+  &.error {
+    border-left: $border-input-error-size $border-input-style $border-input-error-color;
+
+    &::-webkit-input-placeholder {
+      text-align: right;
+      color: $text-error-color;
+    }
+  }
+}
+
+label{
+  color: $label-text-color;
+  padding-left:8px;
+}

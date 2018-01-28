@@ -1,0 +1,21 @@
+
+<div class="form-container">
+  <app-lgn-form class="form-login" ></app-lgn-form>
+</div>
+
+
+<app-lgn-footer class="footer">
+  <app-shr-button class="button-footer" [state]="forgetPassStatus" [disabled]="forgetPassDisabled" (click)="clickOnForgetPass()">
+    <span class="content-label">{{'forget-pass-button' | translate}}</span>
+    <span class="content-pendingLabel">
+      <app-shr-loading></app-shr-loading>
+    </span>
+  </app-shr-button>
+  <app-shr-button class="button-footer" [state]="assistanceStatus" [disabled]="assistanceDisabled" (click)="clickOnAssistance()">
+    <span class="content-label">{{'assistance-button' | translate}}</span>
+    <span class="content-pendingLabel">
+      <app-shr-loading></app-shr-loading>
+    </span>
+  </app-shr-button>
+
+</app-lgn-footer>

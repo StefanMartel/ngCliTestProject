@@ -1,0 +1,28 @@
+<button
+  class="btn"
+  [disabled]="disabled"
+  [class.btn-default]="state == ShrButtonState.initial"
+  [class.btn-info]="state == ShrButtonState.pending"
+  [class.btn-danger]="state == ShrButtonState.error"
+  [class.btn-success]="state == ShrButtonState.success"
+  type="{{ type }}"
+  [@container]="state">
+
+  <div *ngIf="state == ShrButtonState.initial " [@initial]="state">
+      <ng-content select=".content-label"></ng-content>
+  </div>
+
+  <div *ngIf="state == ShrButtonState.pending" [@pending]="state">
+      <ng-content select=".content-pendingLabel"></ng-content>
+  </div>
+
+  <div *ngIf="state == ShrButtonState.error" [@error]="state">
+      <ng-content select=".content-errorLabel"></ng-content>
+  </div>
+
+  <div *ngIf="state == ShrButtonState.success" [@success]="state">
+      <ng-content select=".content-successLabel"></ng-content>
+  </div>
+
+</button>
+

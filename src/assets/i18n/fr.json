@@ -1,0 +1,48 @@
+{
+
+  "login-page-title" : "Se connecter",
+  "login-input-name": "Nom",
+  "login-input-password": "Mot de passe",
+  "login-input-stay-connect": "Rester connecté",
+  "login-button-submit": "Valider",
+  "login-button-submit-error": "Nom / Mot de passe incorrect",
+  "login-button-submit-valid": "Connecté",
+  "login-input-name-error-required":"Nom obligatoire",
+  "login-input-name-error-wrong":"Nom faux",
+  "login-input-password-error-required":"Mot de passe obligatoire",
+  "login-input-password-error-wrong":"Mot de passe faux",
+
+  "forget-pass-button" : "Mot de passe oublié",
+  "forget-page-title" : "Mot de passe oublié",
+  "forget-pass-input-login": "Entrez votre login ici",
+  "forget-pass-input-login-required": "Entrez votre login ici (obligatoire)",
+  "forget-pass-button-submit": "Demander un nouveau mot de passe",
+  "forget-pass-button-submit-error": "Erreur de traitement",
+  "forget-pass-button-submit-valid": "Le demande a été faite",
+
+  "assistance-button" : "Assistance",
+  "assistance-page-title" : "Besoin d'assistance ?",
+  "assistance-page-number" : "08* *** ***",
+
+  "copy-button-text" : "Copier dans le presse-papier",
+  "copy-button-text-valid" : "Copie OK",
+  "copy-button-text-error" : "Copie KO",
+
+  "home-page-title" : "Acceuil",
+
+  "menu-item-dashboard": "Tableau de bord",
+  "menu-item-appointment": "Rendez-vous",
+  "menu-item-vehicle": "Véhicules",
+  "menu-item-delivery": "Livraison",
+  "menu-item-restitution": "Restitution",
+  "menu-item-preferences": "Préferences",
+  "menu-item-help": "Aide",
+  "menu-item-sign-out": "Déconnexion",
+
+  "tile-first-title": "Révision(s) programmée(s)",
+  "tile-first-desc": "Réseau",
+  "tile-second-title": "Livraison(s)",
+  "tile-second-desc": "Cette semaine",
+
+  "resume-tile-first-title": "Rendez-vous"
+}
