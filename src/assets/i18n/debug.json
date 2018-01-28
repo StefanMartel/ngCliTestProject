@@ -1,0 +1,46 @@
+{
+
+  "login-page-title" : "login-page-title",
+  "login-input-name": "login-input-name",
+  "login-input-password": "login-input-password",
+  "login-input-stay-connect": "login-input-stay-connect",
+  "login-button-submit": "login-button-submit",
+  "login-button-submit-error": "login-button-submit-error",
+  "login-button-submit-valid": "login-button-submit-valid",
+  "login-input-name-error-required": "login-input-name-error-required",
+  "login-input-name-error-wrong": "login-input-name-error-wrong",
+  "login-input-password-error-required": "login-input-password-error-required",
+  "login-input-password-error-wrong": "login-input-password-error-wrong",
+
+  "forget-pass-button" : "forget-pass-button",
+  "forget-page-title" : "forget-page-title",
+  "forget-pass-input-login": "forget-pass-input-login",
+  "forget-pass-input-login-required": "forget-pass-input-login-required",
+  "forget-pass-button-submit": "forget-pass-button-submit",
+  "forget-pass-button-submit-error": "forget-pass-button-submit-error",
+  "forget-pass-button-submit-valid": "forget-pass-button-submit-valid",
+
+  "assistance-button" : "assistance-button",
+  "assistance-page-title" : "assistance-page-title",
+  "assistance-page-number" : "assistance-page-number",
+
+  "copy-button-text" : "copy-button-text",
+  "copy-button-text-valid" : "copy-button-text-valid",
+  "copy-button-text-error" : "copy-button-text-error",
+
+  "home-page-title" : "home-page-title",
+
+  "menu-item-dashboard": "menu-item-dashboard",
+  "menu-item-appointment": "menu-item-appointment",
+  "menu-item-vehicle": "menu-item-vehicle",
+  "menu-item-delivery": "menu-item-delivery",
+  "menu-item-restitution": "menu-item-restitution",
+  "menu-item-preferences": "menu-item-preferences",
+  "menu-item-help": "menu-item-help",
+  "menu-item-sign-out": "menu-item-sign-out",
+
+  "tile-first-title": "tile-first-title",
+  "tile-first-desc": "tile-first-desc",
+  "tile-second-title": "tile-second-title",
+  "tile-second-desc": "tile-second-desc"
+}

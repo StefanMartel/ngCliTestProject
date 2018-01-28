@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'menu-font/style';
+
+*{
+  font-family: $font-family;
+}
+
+button[type="submit"]{
+  border: none;
+  padding:10px;
+  cursor: pointer;
+
+  &:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+div{
+  &.error{
+    padding-top: 5px;
+    color: $text-error-color;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+}
+
+/** To desactivate to autofill color in Chrome ***/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.inline{
+  display: inline-flex;
+}
+
+.w100{
+  width:100%;
+}
+
+
+

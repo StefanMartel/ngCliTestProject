@@ -1,0 +1,51 @@
+<form *ngIf="loginForm" (ngSubmit)="onSubmit()" [formGroup]="loginForm" >
+  <div class="div-form" >
+    <app-shr-input
+      class="w100"
+      [inputForm]="loginForm"
+      [type]="'text'"
+      [id]="'login-input'"
+      [placeholder]=" loginInProgress === errorButtonState ? ('login-input-name-error-wrong' | translate) :
+                ( (!login.valid && login.touched) ? ('login-input-name-error-required' | translate) : ('login-input-name' | translate)) "
+      [controlName]="'login'"
+      [errorClassCondition]="(!login.valid && login.touched) || loginInProgress === errorButtonState"
+      [disabled]="true"
+      (keypress)="valueChange()">
+    </app-shr-input>
+  </div>
+  <div class="div-form">
+    <app-shr-input
+      class="w100"
+      [inputForm]="loginForm"
+      [type]="'password'"
+      [id]="'password-input'"
+      [placeholder]=" loginInProgress === errorButtonState ? ('login-input-password-error-wrong' | translate) :
+                ( (!password.valid && password.touched) ? ('login-input-password-error-required' | translate) : ('login-input-password' | translate)) "
+      [controlName]="'password'"
+      [errorClassCondition]="(!password.valid && password.touched) || loginInProgress === errorButtonState"
+      (keypress)="valueChange()" >
+    </app-shr-input>
+  </div>
+  <div class="div-form">
+    <app-shr-input
+      [inputForm]="loginForm"
+      [type]="'checkbox'"
+      [labelText]="('login-input-stay-connect' | translate)"
+      [labelPlace]="'after'"
+      [id]="'stay-connect-input'"
+      [controlName]="'stayConnect'"
+      (keypress)="valueChange()">
+    </app-shr-input>
+  </div>
+
+  <app-shr-button
+    [state]="loginInProgress"
+    [disabled]="!loginForm.valid">
+    <span class="content-label">{{'login-button-submit' | translate}}</span>
+    <span class="content-errorLabel">{{'login-button-submit-error' | translate}}</span>
+    <span class="content-successLabel">{{'login-button-submit-valid' | translate}}</span>
+    <span class="content-pendingLabel">
+      <app-shr-loading></app-shr-loading>
+    </span>
+  </app-shr-button>
+</form>

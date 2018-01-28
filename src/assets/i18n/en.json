@@ -1,0 +1,48 @@
+{
+
+  "login-page-title" : "Welcome",
+  "login-input-name": "Name",
+  "login-input-password": "Password",
+  "login-input-stay-connect": "Stay connected",
+  "login-button-submit": "Submit",
+  "login-button-submit-error": "Bad credentials",
+  "login-button-submit-valid": "logged in",
+  "login-input-name-error-required":"Name required",
+  "login-input-name-error-wrong":"Wrong Name",
+  "login-input-password-error-required":"Password required",
+  "login-input-password-error-wrong":"Wrong password",
+
+  "forget-pass-button" : "Forget Password",
+  "forget-page-title" : "Forget Password",
+  "forget-pass-input-login": "Enter your login here",
+  "forget-pass-input-login-required": "Enter your login here (required)",
+  "forget-pass-button-submit": "Ask new password",
+  "forget-pass-button-submit-error": "Error of the demand",
+  "forget-pass-button-submit-valid": "Ask as been done",
+
+  "assistance-button" : "Assistance",
+  "assistance-page-title" : "Need assistance?",
+  "assistance-page-number" : "08** *** ***",
+
+  "copy-button-text" : "Copy to clipboard",
+  "copy-button-text-valid" : "Copy successed",
+  "copy-button-text-error" : "Copy failed",
+
+  "home-page-title" : "home, sweet home",
+
+  "menu-item-dashboard": "Dashboard",
+  "menu-item-appointment": "Appointements",
+  "menu-item-vehicle": "Vehicle",
+  "menu-item-delivery": "Delivery",
+  "menu-item-restitution": "Restitution",
+  "menu-item-preferences": "Preferences",
+  "menu-item-help": "Help",
+  "menu-item-sign-out": "Sign out",
+
+  "tile-first-title": "Scheduled revision(s)",
+  "tile-first-desc": "***** net",
+  "tile-second-title": "Delivery(ies)",
+  "tile-second-desc": "This week",
+
+  "resume-tile-first-title": "My meeting"
+}
