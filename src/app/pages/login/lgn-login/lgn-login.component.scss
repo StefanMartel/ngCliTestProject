@@ -1,21 +1,10 @@
 @import '../../../shared/styles/global-styles';
 
 .form-container{
-  position:absolute;
+  position: absolute;
   width: $form-login-width;
   left: calc(50% - #{$form-login-width}/2);
+  top: 200px;
 }
 
-.footer{
-  position:absolute;
-  bottom:10px;
-  width:100%;
 
-  .button-footer{
-     float:right;
-     &:first-child{
-        float:left;
-     }
-  }
-
-}

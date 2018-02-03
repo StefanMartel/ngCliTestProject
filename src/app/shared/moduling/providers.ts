@@ -17,14 +17,14 @@ export enum typeProviderService {
   fake
 }
 
-export function localStorageService (typeProvider: typeProviderService) {
+export function localStorageService () {
   return {
     provide: LocalStorageService,
     useFactory: LocalStorageServicefactory
   };
 }
 
-export function authService (typeProvider: typeProviderService) {
+export function authService () {
   return {
     provide: AuthService,
     useFactory: AuthServicefactory,
@@ -40,7 +40,7 @@ export function authHTTP (typeProvider: typeProviderService) {
   }
 }
 
-export function httpRepo (typeProvider: typeProviderService) {
+export function httpRepo () {
   return {
     provide: HttpRepo,
     useFactory: Httpfactory,
@@ -48,7 +48,7 @@ export function httpRepo (typeProvider: typeProviderService) {
   }
 }
 
-export function authGuardService (typeProvider: typeProviderService) {
+export function authGuardService () {
   return {
     provide: AuthGuardService,
     useFactory: AuthGuardServicefactory,

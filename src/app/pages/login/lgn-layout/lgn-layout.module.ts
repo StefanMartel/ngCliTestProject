@@ -10,7 +10,6 @@ import { LgnAssistanceComponent } from '../lgn-assistance/lgn-assistance.compone
 import { LgnLoginComponent } from '../lgn-login/lgn-login.component';
 import { LgnForgetPassComponent } from '../lgn-forget-pass/lgn-forget-pass.component';
 import { LgnFormComponent } from '../lgn-form/lgn-form.component';
-import { LgnFooterComponent } from '../lgn-footer/lgn-footer.component';
 
 import {
   authGuardService, authHTTP, authService, httpRepo, localStorageService,
@@ -26,14 +25,14 @@ import {
     RouterModule.forChild(loginRoutes)
   ],
   declarations: [ LgnLayoutComponent, LgnAssistanceComponent, LgnLoginComponent,
-    LgnForgetPassComponent, LgnFormComponent, LgnFooterComponent],
+    LgnForgetPassComponent, LgnFormComponent],
   exports: [],
   providers: [
-    localStorageService(typeProviderService.real),
-    httpRepo(typeProviderService.real),
+    localStorageService(),
+    httpRepo(),
     authHTTP(typeProviderService.real),
-    authService(typeProviderService.real),
-    authGuardService(typeProviderService.real)
+    authService(),
+    authGuardService()
   ]
 })
 

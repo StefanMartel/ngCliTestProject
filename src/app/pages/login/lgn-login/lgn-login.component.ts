@@ -26,13 +26,6 @@ export class LgnLoginComponent {
 
   constructor(private router: Router) {}
 
-  clickOnForgetPass() {
-    this.forgetPassStatus = InteractiveButtonState.pending;
-    this.forgetPassDisabled = true;
-    this.router.navigate(['forgetPass']).then( response => {
-      console.log(response);
-    });
-  }
 
   clickOnAssistance() {
     this.assistanceStatus = InteractiveButtonState.pending;

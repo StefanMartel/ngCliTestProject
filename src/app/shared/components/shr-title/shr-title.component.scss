@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+
+$title-background-color: #FFFFFF;
+$title-background-url: '../../../../assets/images/login_bg.jpg';
+$title-text-color: #FFFFFF;
+$title-text-color-font-size: 1.25em;
+
+$title-grayscale-value: 0.1;
+$title-blur-value: 3px;
+
+.bgTitle{
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background : url($title-background-url) no-repeat;
+  background-size: cover;
+  z-index: -1;
+
+  filter: blur($title-blur-value) grayscale($title-grayscale-value);
+  -webkit-filter: blur($title-blur-value) grayscale($title-grayscale-value);
+  -moz-filter: blur($title-blur-value) grayscale($title-grayscale-value);
+  -o-filter: blur($title-blur-value) grayscale($title-grayscale-value);
+  -ms-filter: blur($title-blur-value) grayscale($title-grayscale-value);
+}
+
+.textTitle{
+  padding: 40px;
+  color : $title-text-color;
+}

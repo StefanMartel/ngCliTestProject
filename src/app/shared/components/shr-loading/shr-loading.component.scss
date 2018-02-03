@@ -26,6 +26,7 @@
 $ball-size : 5px;
 $bounce-duration: 1000ms;
 $bounce-delay : $bounce-duration / 3;
+$loading-text-color : #32B8C9;
 
 
 
@@ -43,7 +44,7 @@ $bounce-delay : $bounce-duration / 3;
     width: $ball-size;
     height: $ball-size;
     border-radius: 50%;
-    background-color: $button-text-color;
+    background-color: $loading-text-color;
     vertical-align: middle;
     line-height: $ball-size;
     transform: translateY(2px);

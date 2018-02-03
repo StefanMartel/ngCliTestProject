@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LgnFooterComponent } from './lgn-footer.component';
+import { ShrFooterComponent } from './shr-footer.component';
 
-describe('LgnFooterComponent', () => {
-  let component: LgnFooterComponent;
-  let fixture: ComponentFixture<LgnFooterComponent>;
+describe('ShrFooterComponent', () => {
+  let component: ShrFooterComponent;
+  let fixture: ComponentFixture<ShrFooterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LgnFooterComponent ]
+      declarations: [ ShrFooterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LgnFooterComponent);
+    fixture = TestBed.createComponent(ShrFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

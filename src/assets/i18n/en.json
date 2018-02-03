@@ -5,12 +5,17 @@
   "login-input-password": "Password",
   "login-input-stay-connect": "Stay connected",
   "login-button-submit": "Submit",
-  "login-button-submit-error": "Bad credentials",
+  "login-button-submit-error": "Data error",
   "login-button-submit-valid": "logged in",
+  "login-button-submit-wrong": "Bad credentials",
   "login-input-name-error-required":"Name required",
   "login-input-name-error-wrong":"Wrong Name",
   "login-input-password-error-required":"Password required",
   "login-input-password-error-wrong":"Wrong password",
+
+  "footer-first-text": "Contact us",
+  "footer-second-text": "Who are we ?",
+  "footer-third-text": "Conditions of use",
 
   "forget-pass-button" : "Forget Password",
   "forget-page-title" : "Forget Password",

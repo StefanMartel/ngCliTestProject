@@ -1,5 +1,7 @@
 <div [formGroup]="inputForm" class="inline w100">
-  <label for="{{id}}" *ngIf="labelPlace=='before'">{{labelText}}</label>
+  <label for="{{id}}" *ngIf="labelPlace=='before'">
+      <ng-container *ngTemplateOutlet="labelText"></ng-container>
+  </label>
   <input *ngIf="type!=='checkbox'" type="{{type}}"
          id="{{id}}"
          placeholder="{{placeholder}}"
@@ -15,5 +17,11 @@
          [class.error]="errorClassCondition"
          [disabled]="disabled"
   />
-  <label for="{{id}}" *ngIf="labelPlace=='after'">{{labelText}}</label>
+  <label for="{{id}}" *ngIf="labelPlace=='after'">
+    <ng-container *ngTemplateOutlet="labelText"></ng-container>
+  </label>
 </div>
+
+<ng-template #labelText>
+  <ng-content select=".content-label"></ng-content>
+</ng-template>

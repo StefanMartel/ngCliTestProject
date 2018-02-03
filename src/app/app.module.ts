@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import {createTranslateLoader} from './shared/moduling/function_factory';
 import {appRoutes} from './app.route';
 import {LoginLayoutModule} from './pages/login/lgn-layout/lgn-layout.module';
+import {SharedModule} from './shared/components/shared.module';
 
 
 
@@ -21,6 +22,7 @@ import {LoginLayoutModule} from './pages/login/lgn-layout/lgn-layout.module';
     BrowserModule,
     BrowserAnimationsModule,
     LoginLayoutModule,
+    SharedModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
