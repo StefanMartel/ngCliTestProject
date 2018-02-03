@@ -9,6 +9,7 @@ import {ServerError} from '../../../error/service/server-error/server-error';
 import {httpServerURL} from '../../../../../app/shared/global-variable';
 import {objectToString} from '../../../../../app/shared/global-function';
 import {IAuth} from '../i-auth';
+import {isErrorResponse} from '../../../error/model/response/error-response.model';
 import {ErrorObservable} from 'rxjs/observable/ErrorObservable';
 
 export class AuthHttp extends ServerError implements IAuth {
@@ -21,15 +22,22 @@ export class AuthHttp extends ServerError implements IAuth {
     }
 
     logUser(loginObj: LoginBack): Observable<LoginResponse> {
-        return this.httpService.httpCallGet(httpServerURL.Auth.serverRootAuth + httpServerURL.Auth.AuthPath, objectToString(loginObj, '/')  )
+        return this.httpService.httpCallPost(httpServerURL.Auth.serverRootAuth + httpServerURL.Auth.AuthPath, loginObj  )
             .map(res => {
                     if (res !== '') {
-                        return new LoginResponse(res);
+                        if (isLoginResponse(res)) {
+                          return new LoginResponse(res);
+                        }
+                        if (isErrorResponse(res)) {
+                          throw new Error (res.errorDescription);
+                        }else {
+                          throw new Error ('Connexion foireuse');
+                        }
                     } else {
-                        this.handleDataTypeError('Mauvais type');
+                        throw new Error ('Mauvais type');
                     }
                 }
-            );
+            ).catch(error => this.handleServerResponseError('error'));
     }
 
     forgetPassword(loginObj: LoginBack): Observable<LoginResponse> {

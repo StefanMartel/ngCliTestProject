@@ -5,12 +5,17 @@
   "login-input-password": "Mot de passe",
   "login-input-stay-connect": "Rester connecté",
   "login-button-submit": "Valider",
-  "login-button-submit-error": "Nom / Mot de passe incorrect",
+  "login-button-submit-error": "Erreur de connection",
   "login-button-submit-valid": "Connecté",
+  "login-button-submit-wrong": "Nom / Mot de passe incorrect",
   "login-input-name-error-required":"Nom obligatoire",
   "login-input-name-error-wrong":"Nom faux",
   "login-input-password-error-required":"Mot de passe obligatoire",
   "login-input-password-error-wrong":"Mot de passe faux",
+
+  "footer-first-text": "Nous contacter",
+  "footer-second-text": "Qui sommes-nous ?",
+  "footer-third-text": "Conditions d'utilisation",
 
   "forget-pass-button" : "Mot de passe oublié",
   "forget-page-title" : "Mot de passe oublié",

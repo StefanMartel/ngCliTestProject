@@ -1,5 +1,16 @@
 @import '../../styles/global-styles';
 
+$border-input-color:#FFFFFF;
+$border-input-size: 1px;
+$border-input-style: solid;
+$input-background-color: #DDFFDD;
+$input-text-color: green;
+
+$border-input-error-color:#FF0000;
+$border-input-error-size: 4px;
+
+$label-text-color: green;
+
 input{
 
   &[type="text"],
@@ -16,6 +27,7 @@ input{
   box-sizing: border-box;
   border:$border-input-style $border-input-size $border-input-color;
   background-color: $input-background-color;
+  color: $input-text-color;
 
   &.error {
     border-left: $border-input-error-size $border-input-style $border-input-error-color;

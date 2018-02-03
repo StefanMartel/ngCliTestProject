@@ -23,7 +23,7 @@ export class AuthService {
             .map(res => {
                 this.logged = false;
                 this.storageRepository.setValues(storageVariable.logged, false);
-                if (isLoginResponse(res)) {
+                if (res.token !== '') {
                     this.token = res.token;
                     this.storageRepository.setValues(storageVariable.login, login);
                     this.storageRepository.setValues(storageVariable.logged, true);

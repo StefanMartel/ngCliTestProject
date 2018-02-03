@@ -1,8 +1,8 @@
 
 export const httpServerURL = {
     Auth : {
-        serverRootAuth: 'https://**********',
-        AuthPath: '/********'
+        serverRootAuth: 'http://localhost:3000',
+        AuthPath: '/login'
     },
     serverRoot : 'https://***********',
     Profile : {

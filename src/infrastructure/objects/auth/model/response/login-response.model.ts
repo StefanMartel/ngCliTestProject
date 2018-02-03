@@ -1,9 +1,13 @@
 
-export class LoginResponse{
+export class LoginResponse {
     token: string;
 
-    constructor(token: string){
-        this.token = token;
+    constructor(token: string) {
+        if (typeof token === 'string'){
+          this.token = token;
+        }else{
+          this.token = '';
+        }
     }
 
 }

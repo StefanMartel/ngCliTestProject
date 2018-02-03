@@ -11,6 +11,7 @@
       [errorClassCondition]="(!login.valid && login.touched) || loginInProgress === errorButtonState"
       [disabled]="true"
       (keypress)="valueChange()">
+      <span class="content-label"></span>
     </app-shr-input>
   </div>
   <div class="div-form">
@@ -24,17 +25,18 @@
       [controlName]="'password'"
       [errorClassCondition]="(!password.valid && password.touched) || loginInProgress === errorButtonState"
       (keypress)="valueChange()" >
+      <span class="content-label"></span>
     </app-shr-input>
   </div>
   <div class="div-form">
     <app-shr-input
       [inputForm]="loginForm"
       [type]="'checkbox'"
-      [labelText]="('login-input-stay-connect' | translate)"
       [labelPlace]="'after'"
       [id]="'stay-connect-input'"
       [controlName]="'stayConnect'"
       (keypress)="valueChange()">
+      <span class="content-label">{{'login-input-stay-connect' | translate}}</span>
     </app-shr-input>
   </div>
 
@@ -42,10 +44,18 @@
     [state]="loginInProgress"
     [disabled]="!loginForm.valid">
     <span class="content-label">{{'login-button-submit' | translate}}</span>
+    <span class="content-wrongLabel">{{'login-button-submit-wrong' | translate}}</span>
     <span class="content-errorLabel">{{'login-button-submit-error' | translate}}</span>
     <span class="content-successLabel">{{'login-button-submit-valid' | translate}}</span>
     <span class="content-pendingLabel">
       <app-shr-loading></app-shr-loading>
     </span>
   </app-shr-button>
+
+  <div class="forgetPassLink">
+    <app-shr-link (click)="clickOnForgetPass()">
+      {{'forget-pass-button' | translate}}
+    </app-shr-link>
+  </div>
+
 </form>

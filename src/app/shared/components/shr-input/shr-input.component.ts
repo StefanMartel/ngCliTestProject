@@ -11,7 +11,6 @@ export class ShrInputComponent implements OnInit {
   @Input() public id = '';
   @Input() public type = '';
   @Input() public placeholder = '';
-  @Input() public labelText = '';
   @Input() public labelPlace = '';
   @Input() public inputForm: FormGroup;
 

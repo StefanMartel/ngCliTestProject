@@ -7,6 +7,7 @@
   "login-button-submit": "login-button-submit",
   "login-button-submit-error": "login-button-submit-error",
   "login-button-submit-valid": "login-button-submit-valid",
+  "login-button-submit-wrong": "login-button-submit-wrong",
   "login-input-name-error-required": "login-input-name-error-required",
   "login-input-name-error-wrong": "login-input-name-error-wrong",
   "login-input-password-error-required": "login-input-password-error-required",

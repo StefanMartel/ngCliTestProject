@@ -59,7 +59,7 @@ export class LgnFormComponent implements OnInit {
             this.loginInProgress = InteractiveButtonState.success;
             this.router.navigate(['home/']);
           }else {
-            this.loginInProgress = InteractiveButtonState.error;
+            this.loginInProgress = InteractiveButtonState.wrong;
             this.password.setValue('');
             this.login.setValue('');
           }
@@ -72,6 +72,12 @@ export class LgnFormComponent implements OnInit {
         }
       )
     }
+  }
+
+  clickOnForgetPass() {
+    this.router.navigate(['forgetPass']).then( response => {
+      console.log(response);
+    });
   }
 
 }

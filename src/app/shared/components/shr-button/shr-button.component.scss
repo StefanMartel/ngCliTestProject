@@ -1,10 +1,13 @@
 @import "../../styles/global-styles";
 
+$button-background-color: #FFFFFF;
+$button-text-color: green;
+
 button[type="submit"]{
   margin-top: 15px;
   background-color: $button-background-color;
   color: $button-text-color;
-  width:100%;
+  width: 100%;
   line-height: 20px;
 
   &:disabled{

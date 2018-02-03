@@ -7,15 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LgnLayoutComponent implements OnInit {
 
-  bgProperties = {
-    position : {position : 'absolute', top: '0px', left: '0px'},
-    source : '../../../assets/images/login_bg.jpg',
-    size : {width: '100vw', height: '100vh'}
-  };
-
   constructor() { }
-
-
 
   ngOnInit() {
   }

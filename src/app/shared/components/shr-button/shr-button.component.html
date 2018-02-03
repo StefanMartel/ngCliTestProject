@@ -24,5 +24,9 @@
       <ng-content select=".content-successLabel"></ng-content>
   </div>
 
+  <div *ngIf="state == ShrButtonState.wrong" [@success]="state">
+    <ng-content select=".content-wrongLabel"></ng-content>
+  </div>
+
 </button>
 

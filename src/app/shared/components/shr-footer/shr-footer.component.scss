@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+
+$footer-background-color: #FFFFFF;
+$footer-background-url: '../../../../assets/images/login_bg.jpg';
+$footer-text-color: #FFFFFF;
+$footer-text-color-font-size: 1.25em;
+
+$footer-grayscale-value : 0;
+$footer-brigthness-value : 20%;
+$footer-blur-value : 0px;
+
+.bgFooter{
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  background : url($footer-background-url) no-repeat;
+  background-size: cover;
+
+  filter: blur($footer-blur-value) grayscale($footer-grayscale-value) brightness($footer-brigthness-value);
+  -webkit-filter: blur($footer-blur-value) grayscale($footer-grayscale-value) brightness($footer-brigthness-value);
+  -moz-filter: blur($footer-blur-value) grayscale($footer-grayscale-value) brightness($footer-brigthness-value);
+  -o-filter: blur($footer-blur-value) grayscale($footer-grayscale-value) brightness($footer-brigthness-value);
+  -ms-filter: blur($footer-blur-value) grayscale($footer-grayscale-value) brightness($footer-brigthness-value);
+}
+
+.textFooter{
+  display: inline-flex;
+  width: 100%;
+  font-size: 13px;
+  color: $footer-text-color;
+
+  span{
+    margin-left:10px;
+    margin-top:15px;
+    width:20%;
+  }
+
+}
+
+
