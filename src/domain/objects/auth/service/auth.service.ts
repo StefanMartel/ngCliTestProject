@@ -2,16 +2,16 @@ import {Observable} from 'rxjs/Observable';
 import {isUndefined} from 'util';
 
 import {LoginBack} from '../../../../infrastructure/objects/auth/model/back/login-back.model';
-import {isLoginResponse, LoginResponse} from '../../../../infrastructure/objects/auth/model/response/login-response.model';
 import {IStorage} from '../../../../infrastructure/storage/i-storage-service';
 
 import {storageVariable} from '../../../../app/shared/global-variable';
 import {IAuth} from '../../../../infrastructure/objects/auth/data/i-auth';
+import {ForgetPassBack} from '../../../../infrastructure/objects/auth/model/back/forget-pass-back.model';
 
 export class AuthService {
 
     logged: boolean;
-    token: string
+    token: string;
 
     constructor(public AuthRepository: IAuth, public storageRepository: IStorage) {
         this.logged = false;
@@ -37,10 +37,9 @@ export class AuthService {
             })
     }
 
-    forgetPassword(login: string): Observable<boolean> {
-        return this.AuthRepository.forgetPassword(new LoginBack(login, login))
-            .map( (data: LoginResponse) => {
-                this.token = data.token;
+    forgetPassword(email: string): Observable<boolean> {
+        return this.AuthRepository.forgetPassword(new ForgetPassBack(email))
+            .map( res => {
                 return true;
             });
     }

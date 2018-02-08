@@ -1,42 +1,40 @@
 import {Observable} from 'rxjs/Observable';
 
 import {LoginBack} from '../../model/back/login-back.model';
-import {isLoginResponse, LoginResponse} from '../../model/response/login-response.model';
+import {LoginResponse} from '../../model/response/login-response.model';
 
 import {IHttp} from '../../../../http/i-http';
 
 import {ServerError} from '../../../error/service/server-error/server-error';
-import {httpServerURL} from '../../../../../app/shared/global-variable';
 import {IAuth} from '../i-auth';
-import {ErrorObservable} from 'rxjs/observable/ErrorObservable';
+
+import {ForgetPassBack} from '../../model/back/forget-pass-back.model';
+import {ForgetPassResponse} from '../../model/response/forget-pass-response.model';
 
 export class AuthFakeHttp extends ServerError implements IAuth{
 
     httpService: IHttp;
-    fakeData: LoginResponse;
+    fakeLoginData: LoginResponse;
+    fakeForgetPassData: ForgetPassResponse;
+
 
     constructor(private http: IHttp) {
         super();
         this.httpService = http;
-        this.fakeData = new LoginResponse('falsetoken');
+        this.fakeLoginData = new LoginResponse('falsetoken');
+        this.fakeForgetPassData = new ForgetPassResponse(true);
     }
 
     logUser(loginObj: LoginBack): Observable<LoginResponse> {
         return Observable.of(
-            this.fakeData
+            this.fakeLoginData
         )
     }
 
-    forgetPassword(loginObj: LoginBack): Observable<LoginResponse> {
-        return this.httpService.httpCallPost(httpServerURL.Auth.serverRootAuth + httpServerURL.Auth.AuthPath, loginObj)
-            .map(res => {
-                    if (isLoginResponse(res)) {
-                        return res
-                    } else {
-                        return this.handleDataTypeError('Mauvais type');
-                    }
-                }
-            );
+    forgetPassword(forgetPassObj: ForgetPassBack): Observable<ForgetPassResponse> {
+      return Observable.of(
+        this.fakeForgetPassData
+      )
     }
 
 }
