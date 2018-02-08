@@ -1,3 +1,35 @@
-<p>
-  lgn-forget-pass works!
-</p>
+<div class="form-container">
+  <form *ngIf="forgetForm" (ngSubmit)="onSubmit()" [formGroup]="forgetForm" >
+    <div class="div-form" >
+      <app-shr-input
+        class="w100"
+        [inputForm]="forgetForm"
+        [type]="'text'"
+        [id]="'email-input'"
+        [placeholder]="
+              email.errors ?
+              (email.errors.mailFormatError && email.touched) ? ('forget-input-email-error-pattern' | translate) :
+                ((email.errors.required && email.touched)? ('forget-input-email-mandatory' | translate) :
+                  ('forget-input-email' | translate)) : ''"
+        [controlName]="'email'"
+        [errorClassCondition]="(!email.valid && email.touched) || forgetInProgress === errorButtonState"
+        [disabled]="true"
+        (keypress)="valueChange()">
+        <span class="content-label"></span>
+      </app-shr-input>
+    </div>
+
+    <app-shr-button
+      [state]="forgetInProgress"
+      [disabled]="!forgetForm.valid">
+      <span class="content-label">{{'forget-button-submit' | translate}}</span>
+      <span class="content-errorLabel">{{'forget-button-submit-error' | translate}}</span>
+      <span class="content-successLabel">{{'forget-button-submit-valid' | translate}}</span>
+      <span class="content-pendingLabel">
+        <app-shr-loading></app-shr-loading>
+      </span>
+    </app-shr-button>
+
+  </form>
+</div>
+

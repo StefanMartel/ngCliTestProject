@@ -13,6 +13,13 @@
   "login-input-password-error-required": "login-input-password-error-required",
   "login-input-password-error-wrong": "login-input-password-error-wrong",
 
+  "forget-input-email": "forget-input-email",
+  "forget-input-email-error-pattern": "forget-input-email-error-pattern",
+  "forget-input-email-mandatory": "forget-input-email-mandatory",
+  "forget-button-submit": "forget-button-submit",
+  "forget-button-submit-error": "forget-button-submit-error",
+  "forget-button-submit-valid": "forget-button-submit-valid",
+
   "forget-pass-button" : "forget-pass-button",
   "forget-page-title" : "forget-page-title",
   "forget-pass-input-login": "forget-pass-input-login",

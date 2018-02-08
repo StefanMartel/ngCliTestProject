@@ -23,7 +23,7 @@ export class UserService {
    getProfile(): Observable<User> {
         let tmpProfile: User;
         if (this.AuthServ.getToken() !== '') {
-            return this.UserRepository.getProfile(new ProfileBack(httpServerURL.Profile.sequence, this.AuthServ.getToken()))
+            return this.UserRepository.getProfile(new ProfileBack(httpServerURL.Profile.path, this.AuthServ.getToken()))
                 .map(res => {
                    tmpProfile = res;
                    return tmpProfile;
