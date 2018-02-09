@@ -63,7 +63,7 @@ export class LgnLoginComponent implements OnInit {
           if (data) {
             this.loginInProgress = InteractiveButtonState.success;
             this.router.navigate(['home/']);
-          }else {
+          } else {
             this.loginInProgress = InteractiveButtonState.wrong;
             this.password.setValue('');
             this.login.setValue('');
@@ -75,7 +75,7 @@ export class LgnLoginComponent implements OnInit {
           this.password.setValue('');
           this.login.setValue('');
         }
-      )
+      );
     }
   }
 

@@ -18,6 +18,7 @@
   "forget-input-email-mandatory": "E-mail address required",
   "forget-button-submit": "Send",
   "forget-button-submit-error": "E-mail send error",
+  "forget-button-submit-wrong": "E-mail wrong format",
   "forget-button-submit-valid": "E-mail send successfully",
 
   "footer-first-text": "Contact us",
