@@ -9,7 +9,6 @@ import { SharedModule } from '../../../shared/components/shared.module';
 import { LgnAssistanceComponent } from '../lgn-assistance/lgn-assistance.component';
 import { LgnLoginComponent } from '../lgn-login/lgn-login.component';
 import { LgnForgetPassComponent } from '../lgn-forget-pass/lgn-forget-pass.component';
-import { LgnFormComponent } from '../lgn-form/lgn-form.component';
 
 import {
   authGuardService, authHTTP, authService, httpRepo, localStorageService,
@@ -25,7 +24,7 @@ import {
     RouterModule.forChild(loginRoutes)
   ],
   declarations: [ LgnLayoutComponent, LgnAssistanceComponent, LgnLoginComponent,
-    LgnForgetPassComponent, LgnFormComponent],
+    LgnForgetPassComponent],
   exports: [],
   providers: [
     localStorageService(),

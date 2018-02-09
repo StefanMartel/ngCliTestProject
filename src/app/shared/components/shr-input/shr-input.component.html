@@ -2,15 +2,7 @@
   <label for="{{id}}" *ngIf="labelPlace=='before'">
       <ng-container *ngTemplateOutlet="labelText"></ng-container>
   </label>
-  <input *ngIf="type!=='checkbox'" type="{{type}}"
-         id="{{id}}"
-         placeholder="{{placeholder}}"
-         formControlName="{{controlName}}"
-         [class.error]="errorClassCondition"
-         [disabled]="disabled"
-  />
-  <input *ngIf="type==='checkbox'"
-         type="checkbox"
+  <input type="{{type}}"
          id="{{id}}"
          placeholder="{{placeholder}}"
          formControlName="{{controlName}}"

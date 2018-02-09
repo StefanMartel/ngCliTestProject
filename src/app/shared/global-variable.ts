@@ -1,17 +1,17 @@
 
 export const httpServerURL = {
+    serverRoot : 'http://localhost:3000',
     Auth : {
-        serverRootAuth: 'http://localhost:3000',
-        AuthPath: '/login'
+        path: '/login'
     },
-    serverRoot : 'https://***********',
+    ForgetPass : {
+        path: '/forgetPass'
+    },
     Profile : {
-        path: '/**********',
-        sequence: '*********'
+        path: '/**********'
     },
     Rdv : {
-        path: '/**********',
-        sequence: '********'
+        path: '/**********'
     }
 };
 

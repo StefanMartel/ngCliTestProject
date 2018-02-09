@@ -7,10 +7,11 @@ import {IHttp} from '../../../../http/i-http';
 
 import {ServerError} from '../../../error/service/server-error/server-error';
 import {httpServerURL} from '../../../../../app/shared/global-variable';
-import {objectToString} from '../../../../../app/shared/global-function';
 import {IAuth} from '../i-auth';
 import {isErrorResponse} from '../../../error/model/response/error-response.model';
-import {ErrorObservable} from 'rxjs/observable/ErrorObservable';
+
+import {ForgetPassBack} from '../../model/back/forget-pass-back.model';
+import {ForgetPassResponse, isForgetPassResponse} from '../../model/response/forget-pass-response.model';
 
 export class AuthHttp extends ServerError implements IAuth {
 
@@ -22,7 +23,7 @@ export class AuthHttp extends ServerError implements IAuth {
     }
 
     logUser(loginObj: LoginBack): Observable<LoginResponse> {
-        return this.httpService.httpCallPost(httpServerURL.Auth.serverRootAuth + httpServerURL.Auth.AuthPath, loginObj  )
+        return this.httpService.httpCallPost(httpServerURL.serverRoot + httpServerURL.ForgetPass.path, loginObj  )
             .map(res => {
                     if (res !== '') {
                         if (isLoginResponse(res)) {
@@ -40,16 +41,23 @@ export class AuthHttp extends ServerError implements IAuth {
             ).catch(error => this.handleServerResponseError('error'));
     }
 
-    forgetPassword(loginObj: LoginBack): Observable<LoginResponse> {
-        return this.httpService.httpCallPost(httpServerURL.Auth.serverRootAuth + httpServerURL.Auth.AuthPath, loginObj)
-            .map(res => {
-                    if (isLoginResponse(res)) {
-                        return res
-                    } else {
-                        this.handleDataTypeError('Mauvais type');
-                    }
+    forgetPassword(forgetPassObj: ForgetPassBack): Observable<ForgetPassResponse> {
+        return this.httpService.httpCallPost(httpServerURL.serverRoot + httpServerURL.ForgetPass.path, forgetPassObj)
+          .map(res => {
+              if (res !== '') {
+                if (isForgetPassResponse(res)) {
+                  return new ForgetPassResponse(res);
                 }
-            );
+                if (isErrorResponse(res)) {
+                  throw new Error (res.errorDescription);
+                }else {
+                  throw new Error ('Connexion foireuse');
+                }
+              } else {
+                throw new Error ('Mauvais type');
+              }
+            }
+          ).catch(error => this.handleServerResponseError('error'));
     }
 
 }

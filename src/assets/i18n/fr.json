@@ -13,6 +13,13 @@
   "login-input-password-error-required":"Mot de passe obligatoire",
   "login-input-password-error-wrong":"Mot de passe faux",
 
+  "forget-input-email": "Adresse e-mail",
+  "forget-input-email-error-pattern":"Format incorrect",
+  "forget-input-email-mandatory": "Adresse e-mail obligatoire",
+  "forget-button-submit": "Envoyer",
+  "forget-button-submit-error": "Erreur d'envoi de mail",
+  "forget-button-submit-valid": "Envoi réalisé avec succés",
+
   "footer-first-text": "Nous contacter",
   "footer-second-text": "Qui sommes-nous ?",
   "footer-third-text": "Conditions d'utilisation",
