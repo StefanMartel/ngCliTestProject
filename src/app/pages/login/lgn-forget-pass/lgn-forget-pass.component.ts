@@ -45,6 +45,12 @@ export class LgnForgetPassComponent implements OnInit {
     if (this.forgetInProgress !== InteractiveButtonState.initial) {
       this.forgetInProgress = InteractiveButtonState.initial;
     }
+
+    if (this.email.errors && this.email.errors !== null) {
+      if (this.email.errors.mailFormatError) {
+        this.forgetInProgress = InteractiveButtonState.wrong;
+      }
+    }
   }
 
   onSubmit(): void {
@@ -54,7 +60,7 @@ export class LgnForgetPassComponent implements OnInit {
         data => {
           if (data) {
             this.forgetInProgress = InteractiveButtonState.success;
-          }else {
+          } else {
             this.forgetInProgress = InteractiveButtonState.wrong;
             this.email.setValue('');
           }
@@ -64,7 +70,7 @@ export class LgnForgetPassComponent implements OnInit {
           this.forgetInProgress = InteractiveButtonState.error;
           this.email.setValue('');
         }
-      )
+      );
     }
   }
 

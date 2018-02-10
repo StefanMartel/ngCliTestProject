@@ -53,6 +53,18 @@ import {InteractiveButtonState} from '../../enums';
       ])
     ]),
 
+    trigger('wrong', [
+      state('wrong', style({ opacity: 1, transform: 'scale(1)'})),
+      state('*',     style({ opacity: 0, transform: 'scale(0.75)', position: 'absolute'})),
+      transition('wrong => *', [
+        style({ position : 'absolute', top: '1em' }),
+        animate('0.15s ease-in')
+      ]),
+      transition('* => wrong', [
+        animate('0.15s ease-out')
+      ])
+    ]),
+
     trigger('success', [
       state('success', style({ opacity: 1, transform: 'scale(1)'})),
       state('*',     style({ opacity: 0, transform: 'scale(0.75)', position: 'absolute'})),

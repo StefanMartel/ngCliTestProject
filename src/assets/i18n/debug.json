@@ -18,6 +18,7 @@
   "forget-input-email-mandatory": "forget-input-email-mandatory",
   "forget-button-submit": "forget-button-submit",
   "forget-button-submit-error": "forget-button-submit-error",
+  "forget-button-submit-wrong": "forget-button-submit-wrong",
   "forget-button-submit-valid": "forget-button-submit-valid",
 
   "forget-pass-button" : "forget-pass-button",
