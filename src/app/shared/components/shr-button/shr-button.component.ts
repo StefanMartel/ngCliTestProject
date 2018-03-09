@@ -19,60 +19,55 @@ import {InteractiveButtonState} from '../../enums';
       ])
     ]),
 
-    trigger('initial', [
-      state('initial', style({ opacity: 1, transform: 'scale(1)'})),
-      state('*',       style({ opacity: 0, transform: 'scale(0.75)'})),
-      transition('initial => *', [
+    trigger(<any>InteractiveButtonState.initial, [
+      state(<any>InteractiveButtonState.initial, style({ opacity: 1, transform: 'scale(1)'})),
+      transition(<any>InteractiveButtonState.initial + '=> *', [
         animate('0.15s ease-in')
       ]),
-      transition('* => initial', [
+      transition('* => ' + <any>InteractiveButtonState.initial, [
         animate('0.15s 0.15s ease-out')
       ])
     ]),
 
-    trigger('pending', [
-      state('pending', style({ opacity: 1, transform: 'translateY(0)'})),
-      state('*',       style({ opacity: 0, transform: 'translateY(15px)'})),
-      transition('pending => *', [
+    trigger(<any>InteractiveButtonState.pending, [
+      state(<any>InteractiveButtonState.pending, style({ opacity: 1, transform: 'translateY(0)'})),
+      transition(<any>InteractiveButtonState.pending + '=> *', [
         animate('0.15s ease-in')
       ]),
-      transition('* => pending', [
+      transition('* =>' + <any>InteractiveButtonState.pending, [
         animate('0.15s ease-out')
       ])
     ]),
 
-    trigger('error', [
-      state('error', style({ opacity: 1, transform: 'scale(1)'})),
-      state('*',     style({ opacity: 0, transform: 'scale(0.75)', position: 'absolute'})),
-      transition('error => *', [
+    trigger(<any>InteractiveButtonState.error, [
+      state(<any>InteractiveButtonState.error, style({ opacity: 1, transform: 'scale(1)'})),
+      transition(<any>InteractiveButtonState.error + '=> *', [
         style({ position : 'absolute', top: '1em' }),
         animate('0.15s ease-in')
       ]),
-      transition('* => error', [
+      transition('* => ' + <any>InteractiveButtonState.error, [
         animate('0.15s ease-out')
       ])
     ]),
 
-    trigger('wrong', [
-      state('wrong', style({ opacity: 1, transform: 'scale(1)'})),
-      state('*',     style({ opacity: 0, transform: 'scale(0.75)', position: 'absolute'})),
-      transition('wrong => *', [
+    trigger(<any>InteractiveButtonState.wrong, [
+      state(<any>InteractiveButtonState.wrong, style({ opacity: 1, transform: 'scale(1)'})),
+      transition(<any>InteractiveButtonState.wrong + '=> *', [
         style({ position : 'absolute', top: '1em' }),
         animate('0.15s ease-in')
       ]),
-      transition('* => wrong', [
+      transition('* =>' + <any>InteractiveButtonState.wrong, [
         animate('0.15s ease-out')
       ])
     ]),
 
-    trigger('success', [
-      state('success', style({ opacity: 1, transform: 'scale(1)'})),
-      state('*',     style({ opacity: 0, transform: 'scale(0.75)', position: 'absolute'})),
-      transition('success => *', [
+    trigger(<any>InteractiveButtonState.success, [
+      state(<any>InteractiveButtonState.success, style({ opacity: 1, transform: 'scale(1)'})),
+      transition(<any>InteractiveButtonState.success + '=> *', [
         style({ position : 'absolute', top: '1em' }),
         animate('0.15s ease-in')
       ]),
-      transition('* => success', [
+      transition('* => ' + <any>InteractiveButtonState.success, [
         animate('0.15s ease-out')
       ])
     ])
